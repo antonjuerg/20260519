@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: medical-app
   namespace: app
+  labels:
+    app: medical-app
 spec:
   ports:
   - port: 80
