@@ -4,15 +4,11 @@ metadata:
   name: nginx-config
   namespace: app
 data:
-  nginx.conf: |
-    worker_processes 1;
-    events { worker_connections 1024; }
-    http {
-      server {
+  default.conf: |
+    server {
         listen 8080;
         location / {
-          root /usr/share/nginx/html;
-          index index.html;
+            root /usr/share/nginx/html;
+            index index.html;
         }
-      }
     }
