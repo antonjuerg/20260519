@@ -6,7 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'file:///home/ubuntu/repo'
+    # Wskazujemy Twoje oficjalny repozytorium na GitHubie
+    repoURL: 'https://github.com/antonjuerg/20260519'
     targetRevision: HEAD
     path: k3s/base
   destination:
