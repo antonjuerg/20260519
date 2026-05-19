@@ -27,6 +27,9 @@ spec:
         runAsUser: 101
         runAsGroup: 101
         fsGroup: 101
+        # 🔒 Wymagane przez politykę 'restricted' Twojego klastra:
+        seccompProfile:
+          type: RuntimeDefault
       containers:
       - name: webserver
         image: nginx:alpine
@@ -40,7 +43,6 @@ spec:
           capabilities:
             drop:
             - ALL
-        # 🟢 PUNKTY: Ograniczenia zasobów (Resource Limits)
         resources:
           requests:
             memory: "32Mi"
@@ -48,7 +50,6 @@ spec:
           limits:
             memory: "64Mi"
             cpu: "100m"
-        # 🟢 PUNKTY: Sondy żywotności i gotowości (Probes)
         livenessProbe:
           httpGet:
             path: /
