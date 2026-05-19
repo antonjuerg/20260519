@@ -3,3 +3,4 @@ resources:
 - service.yaml
 - nginx-config.yaml
 - ingress.yaml
+- hpa.yaml
