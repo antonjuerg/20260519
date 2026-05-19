@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: medical-app-production
+  namespace: platform
+spec:
+  project: default
+  source:
+    repoURL: 'file:///home/ubuntu/repo'
+    targetRevision: HEAD
+    path: k3s/base
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
