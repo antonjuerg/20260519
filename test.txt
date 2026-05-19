@@ -1,0 +1,6 @@
+chmod +x scripts/*.sh
+./scripts/setup-kind.sh
+cd app && npm install && cd ..
+./scripts/deploy-local-image.sh
+kubectl apply -f k8s/base
+kubectl get pods -n app

@@ -1,0 +1,13 @@
+{
+    "name": "platform-engineer-assignment",
+    "version": "1.0.0",
+    "description": "Starter app for platform engineer assignment",
+    "main": "src/server.js",
+    "scripts": {
+      "start": "node src/server.js",
+      "test": "node --test"
+    },
+    "dependencies": {
+      "express": "^4.21.2"
+    }
+  }
